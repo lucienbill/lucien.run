@@ -7,6 +7,7 @@ const yamlData = YAML.parse(file)
 const defaultLang = yamlData['default-lang']
 const redirects = yamlData.redirects
 const shortPaths = Object.keys(redirects)
+const rootPath = `${__dirname}/..`
 
 // write all redirections (for is faster than foreach)
 for (let index = 0; index < shortPaths.length; index++) {
@@ -30,11 +31,11 @@ for (let index = 0; index < shortPaths.length; index++) {
     </head>
 </html>
 `
-    fs.writeFileSync(filePath, fileContent);
+    fs.writeFileSync(`${rootPath}/${filePath}`, fileContent);
 }
 
 // write the index to the lucien.run/index.html
-fs.copyFile('index.html', 'redirects/index.html', (err) => {
+fs.copyFile(`${rootPath}/index.html`, 'redirects/index.html', (err) => {
     if (err) throw err;
     console.log('index.html was copied to redirects/index.html');
 });
