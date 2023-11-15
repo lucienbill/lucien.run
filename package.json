@@ -4,7 +4,7 @@
   "description": "builder for my own URL shortener thingy",
   "main": "builder/build.js",
   "scripts": {
-    "test": "node builder/build.js"
+    "build": "node builder/build.js"
   },
   "repository": {
     "type": "git",
