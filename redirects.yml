@@ -1,0 +1,11 @@
+default-lang: "fr"
+
+redirects:
+   newsletter:
+      url: "https://tinyletter.com/lucienbill"
+      title: "La Newsletter Tech & Justice Sociale de Billy"
+      description: "L'abonnement est totalement optionnel !"
+   stream:
+      url: "La chaîne Twitch de Billy"
+      title: "Du stream avec du code dedans !"
+      description: "https://www.twitch.tv/billyzetroll"

@@ -2,9 +2,9 @@
   "name": "lucien.run",
   "version": "1.0.0",
   "description": "builder for my own URL shortener thingy",
-  "main": "build.js",
+  "main": "builder/build.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node builder/build.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lucienbill/lucien.run/issues"
   },
-  "homepage": "https://github.com/lucienbill/lucien.run#readme"
+  "homepage": "https://github.com/lucienbill/lucien.run#readme",
+  "dependencies": {
+    "yaml": "^2.3.4"
+  }
 }
