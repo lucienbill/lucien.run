@@ -1,5 +1,6 @@
 const YAML = require('yaml')
 const fs = require('fs')
+const path = require('path')
 
 const file = fs.readFileSync('redirects.yml', 'utf8')
 const yamlData = YAML.parse(file)
@@ -7,14 +8,19 @@ const yamlData = YAML.parse(file)
 const defaultLang = yamlData['default-lang']
 const redirects = yamlData.redirects
 const shortPaths = Object.keys(redirects)
-const rootPath = `${__dirname}/..`
+const rootPath = path.join(process.cwd(), 'redirects');
 
 // write all redirections (for is faster than foreach)
 for (let index = 0; index < shortPaths.length; index++) {
     const shortPath = shortPaths[index]
     const redirect = redirects[shortPath];
     const lang = (!!redirect.lang ? redirect.lang : defaultLang)
-    const filePath = `redirects/${shortPath}/index.html`
+    const filedir = `${rootPath}/${shortPath}`
+    const filePath = `${filedir}/index.html`
+
+    if (!fs.existsSync(filedir)){
+        fs.mkdirSync(filedir, { recursive: true });
+    }
     
     const fileContent = `<!DOCTYPE html>
 <html lang="${lang}">
@@ -31,11 +37,11 @@ for (let index = 0; index < shortPaths.length; index++) {
     </head>
 </html>
 `
-    fs.writeFileSync(`${rootPath}/${filePath}`, fileContent);
+    fs.writeFileSync(filePath, fileContent);
 }
 
 // write the index to the lucien.run/index.html
-fs.copyFile(`${rootPath}/index.html`, 'redirects/index.html', (err) => {
+fs.copyFile(path.join(process.cwd(), 'index.html'), `${rootPath}/index.html`, (err) => {
     if (err) throw err;
     console.log('index.html was copied to redirects/index.html');
 });
