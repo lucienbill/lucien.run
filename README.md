@@ -40,5 +40,8 @@ redirects:
       description: "Du stream avec du code dedans !"
 ```
 
-### V0.0.0
+Known issues:
+- it doesn't support emoji directly (`your-url.io/📺`) -> use a `.gitkeep` file to work around it
+
+### V1.0.0
 It works!
