@@ -6,6 +6,9 @@ redirects:
       title: "La Newsletter Tech & Justice Sociale de Billy"
       description: "L'abonnement est totalement optionnel !"
    stream:
+      aliases: 
+         - live
+         - twitch
       url: "https://www.twitch.tv/billyzetroll"
       title: "La chaîne Twitch de Billy"
       description: "Du stream avec du code dedans !"

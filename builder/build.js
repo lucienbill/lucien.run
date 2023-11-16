@@ -14,14 +14,9 @@ const rootPath = path.join(process.cwd(), 'redirects');
 for (let index = 0; index < shortPaths.length; index++) {
     const shortPath = shortPaths[index]
     const redirect = redirects[shortPath];
+    const aliases = ((!!redirect.aliases? redirect.aliases : []))
+    aliases.push(shortPath)
     const lang = (!!redirect.lang ? redirect.lang : defaultLang)
-    const filedir = `${rootPath}/${shortPath}`
-    const filePath = `${filedir}/index.html`
-
-    if (!fs.existsSync(filedir)){
-        fs.mkdirSync(filedir, { recursive: true });
-    }
-    
     const fileContent = `<!DOCTYPE html>
 <html lang="${lang}">
     <head>
@@ -35,9 +30,22 @@ for (let index = 0; index < shortPaths.length; index++) {
     <meta http-equiv="Refresh" content="0; url='${redirect.url}" />
     <meta name="robots" content="noindex">
     </head>
-</html>
-`
-    fs.writeFileSync(filePath, fileContent);
+</html>`
+
+    for (let i = 0; i < aliases.length; i++) {
+        const alias = aliases[i];
+        console.log(`creating redirect for ${alias} ...`) //DEBUG
+        const filedir = `${rootPath}/${alias}`
+        const filePath = `${filedir}/index.html`
+    
+        if (!fs.existsSync(filedir)){
+            fs.mkdirSync(filedir, { recursive: true });
+        }
+        
+        
+        fs.writeFileSync(filePath, fileContent, {encoding: 'utf8'})
+        console.log(`creating redirect for ${alias}: done`)
+    }
 }
 
 // write the index to the lucien.run/index.html
