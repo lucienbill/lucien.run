@@ -41,7 +41,7 @@ redirects:
 ```
 
 Known issues:
-- it doesn't support emoji directly (`your-url.io/📺`) -> use a `.gitkeep` file to work around it
+- it doesn't support emoji directly (`your-url.io/📺`) -> you can cheat and write the HTML file yourself in `redirects/📺/index.html`
 
 ### V1.0.0
 It works!
