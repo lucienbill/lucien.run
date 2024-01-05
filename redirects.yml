@@ -2,7 +2,7 @@ default-lang: "fr"
 
 redirects:
    newsletter:
-      url: "https://tinyletter.com/lucienbill"
+      url: "https://lucienbill.substack.com/"
       title: "La Newsletter Tech & Justice Sociale de Billy"
       description: "L'abonnement est totalement optionnel !"
    stream:
