@@ -12,3 +12,27 @@ redirects:
       url: "https://www.twitch.tv/billyzetroll"
       title: "La chaîne Twitch de Billy"
       description: "Du stream avec du code dedans !"
+   ai-gitclear:
+      url: "https://www.gitclear.com/coding_on_copilot_data_shows_ais_downward_pressure_on_code_quality"
+      title: "GitHub Copilot et la qualité de code"
+      description: "Etude sur l'impact de GitHub Copilot sur la qualité de code"
+   ai-gpt-privacy:
+      url: "https://tech.co/news/does-chatgpt-save-my-data"
+      title: "Chat GPT collecte beaucoup de données"
+      description: "Vraiment, anonymisez vos prompts !"
+   ai-gpt-copyright:
+      url: "https://fortune.com/2024/01/09/openai-copyright-impossible-new-york-times/"
+      title: "Chat GPT et les droit d'auteurs"
+      description: "La propriété intellectuelle ? C'est uniquement valable pour celles et ceux qui la respectent, pas pour nous, voyons."
+   ai-gpt-kenya:
+      url: "https://www.01net.com/actualites/chatgpt-derriere-la-magie-des-travailleurs-kenyans-payes-une-misere-pour-lexpurger-des-contenus-violents.html"
+      title: "« ChatGPT : derrière la magie, l’horreur pour des travailleurs kenyans payés une misère pour l’expurger des contenus violents »"
+      description: "Apprendre le bien et le mal à chat GPT s'est fait en exploitant des personnes."
+   ai-image-afghan:
+      url: "https://twitter.com/kortizart/status/1588915427018559490"
+      title: "MidJourney et la fille afghane"
+      description: "MidJourney ne crée rien, il régurgite de la donnée digérée"
+   ai-image-stereotypes:
+      url: "https://restofworld.org/2023/ai-image-stereotypes/"
+      title: "How AI reduces the world to stereotypes"
+      description: "Rest of World analyzed 3,000 AI images to see how image generators visualize different countries and cultures."
