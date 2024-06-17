@@ -36,3 +36,7 @@ redirects:
       url: "https://restofworld.org/2023/ai-image-stereotypes/"
       title: "How AI reduces the world to stereotypes"
       description: "Rest of World analyzed 3,000 AI images to see how image generators visualize different countries and cultures."
+   bddmap:
+      url: "https://www.youtube.com/watch?v=A1KZ2mdbrZs"
+      title: "Example Mapping: replay de l'atelier par Julien Topçu"
+      description: "L'example mapping est un excellent outil pour écrire des spécifications claires."
