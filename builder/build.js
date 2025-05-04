@@ -27,7 +27,7 @@ for (let index = 0; index < shortPaths.length; index++) {
     
     <meta property="og:title" content="${redirect.title}">
     <meta property="og:description" content="${redirect.description}">
-    <meta http-equiv="Refresh" content="0; url='${redirect.url}" />
+    <meta http-equiv="Refresh" content="0; url='${redirect.url}'" />
     <meta name="robots" content="noindex">
     </head>
 </html>`
