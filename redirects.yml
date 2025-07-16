@@ -2,7 +2,7 @@ default-lang: "fr"
 
 redirects:
    newsletter:
-      url: "https://lucienbill.substack.com/"
+      url: "https://www.lucienbill.fr/newsletter/"
       title: "La Newsletter Tech & Justice Sociale de Billy"
       description: "L'abonnement est totalement optionnel !"
    stream:
