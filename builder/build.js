@@ -36,8 +36,6 @@ for (let index = 0; index < shortPaths.length; index++) {
         const filedir = `${rootPath}/${alias}`
         const filePath = `${filedir}/index.html`
 
-        console.log("DEBUG" + filedir)
-    
         if (!fs.existsSync(filedir)){
             fs.mkdirSync(filedir, { recursive: true });
         }
