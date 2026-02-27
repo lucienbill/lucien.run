@@ -2,14 +2,7 @@ const TOML = require('toml')
 const fs = require('fs')
 const path = require('path')
 
-const file = fs.readFileSync('redirects.toml', 'utf8')
-try {
-  const configData = TOML.parse(file)
-} catch (e) {
-  console.error("Parsing error on line " + e.line + ", column " + e.column +
-    ": " + e.message);
-}
-
+const configData = parseConfigFile()
 const defaultLang = configData['default-lang']
 const redirects = configData.redirects
 const shortPaths = Object.keys(redirects)
@@ -42,6 +35,8 @@ for (let index = 0; index < shortPaths.length; index++) {
         console.log(`creating redirect for ${alias} ...`) //DEBUG
         const filedir = `${rootPath}/${alias}`
         const filePath = `${filedir}/index.html`
+
+        console.log("DEBUG" + filedir)
     
         if (!fs.existsSync(filedir)){
             fs.mkdirSync(filedir, { recursive: true });
@@ -58,3 +53,14 @@ fs.copyFile(path.join(process.cwd(), 'index.html'), `${rootPath}/index.html`, (e
     if (err) throw err;
     console.log('index.html was copied to redirects/index.html');
 });
+
+function parseConfigFile(params) {
+    const file = fs.readFileSync('redirects.toml', 'utf8')
+try {
+  const configData = TOML.parse(file)
+  return configData
+} catch (e) {
+  console.error("Parsing error on line " + e.line + ", column " + e.column +
+    ": " + e.message);
+}
+}
