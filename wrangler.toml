@@ -1,6 +1,0 @@
-name = "lucien-run"
-# Set this to today's date
-compatibility_date = "2026-02-27"
-
-[assets]
-directory = "./redirects/"
