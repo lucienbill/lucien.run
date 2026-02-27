@@ -1,10 +1,10 @@
-const YAML = require('toml')
+const TOML = require('toml')
 const fs = require('fs')
 const path = require('path')
 
 const file = fs.readFileSync('redirects.toml', 'utf8')
 try {
-  const configData = toml.parse(file)
+  const configData = TOML.parse(file)
 } catch (e) {
   console.error("Parsing error on line " + e.line + ", column " + e.column +
     ": " + e.message);
