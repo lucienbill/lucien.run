@@ -1,12 +1,17 @@
-const YAML = require('yaml')
+const YAML = require('toml')
 const fs = require('fs')
 const path = require('path')
 
-const file = fs.readFileSync('redirects.yml', 'utf8')
-const yamlData = YAML.parse(file)
+const file = fs.readFileSync('redirects.toml', 'utf8')
+try {
+  const configData = toml.parse(file)
+} catch (e) {
+  console.error("Parsing error on line " + e.line + ", column " + e.column +
+    ": " + e.message);
+}
 
-const defaultLang = yamlData['default-lang']
-const redirects = yamlData.redirects
+const defaultLang = configData['default-lang']
+const redirects = configData.redirects
 const shortPaths = Object.keys(redirects)
 const rootPath = path.join(process.cwd(), 'redirects');
 
