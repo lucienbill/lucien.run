@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/lucienbill/lucien.run#readme",
   "dependencies": {
-    "yaml": "^2.3.4"
+    "toml": "^3.0.0"
   }
 }

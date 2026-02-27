@@ -41,7 +41,8 @@ redirects:
 ```
 
 Known issues:
-- it doesn't support emoji directly (`your-url.io/📺`) -> you can cheat and write the HTML file yourself in `redirects/📺/index.html`
+- ~~it doesn't support emoji directly (`your-url.io/📺`) -> you can cheat and write the HTML file yourself in `redirects/📺/index.html`~~ -> fixed in V 2.0.0
 
-### V1.0.0
-It works!
+### V2.0.0
+- migrated from yaml to toml (easier to manage for humans)
+- added support for emojis (such as `your-url.io/📺`)
