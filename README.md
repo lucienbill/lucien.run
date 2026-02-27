@@ -35,7 +35,7 @@ redirects:
       aliases: 
          - live
          - twitch
-      url: "https://www.twitch.tv/billyzetroll"
+      url: "https://www.twitch.tv/le_lucien_fr"
       title: "La chaîne Twitch de Billy"
       description: "Du stream avec du code dedans !"
 ```
@@ -46,3 +46,22 @@ Known issues:
 ### V2.0.0
 - migrated from yaml to toml (easier to manage for humans)
 - added support for emojis (such as `your-url.io/📺`)
+
+Example:
+```toml
+default-lang = "fr"
+
+[redirects]
+
+[redirects.newsletter]
+lan = "en"
+aliases = [ "📰", "🗞️" ]
+url = "https://www.lucienbill.fr/newsletter/"
+title = "This is my newsletter!"
+description = "It's cool"
+
+[redirects.stream]
+url = "https://www.twitch.tv/le_lucien_fr"
+title = "La chaîne Twitch de Billy"
+```
+
