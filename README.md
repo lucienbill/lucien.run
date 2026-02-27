@@ -41,8 +41,8 @@ redirects:
 ```
 
 Known issues:
-- it doesn't support emoji directly (`your-url.io/📺`) -> you can cheat and write the HTML file yourself in `redirects/📺/index.html`
+- ~~it doesn't support emoji directly (`your-url.io/📺`) -> you can cheat and write the HTML file yourself in `redirects/📺/index.html`~~ -> fixed in V 2.0.0
 
 ### V2.0.0
 - migrated from yaml to toml (easier to manage for humans)
-- creates a wrangler.toml, because of migration from Cloudflare pages to Cloudflare workers. Still the same output though, and can still be used with something else than cloudflare
+- added support for emojis (such as `your-url.io/📺`)

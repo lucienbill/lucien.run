@@ -9,7 +9,7 @@ title = "La Newsletter Tech & Justice Sociale de Billy"
 description = "L'abonnement est totalement optionnel !"
 
 [redirects.stream]
-aliases = [ "live", "twitch" ]
+aliases = [ "live", "twitch", "📺" ]
 url = "https://www.twitch.tv/le_lucien_fr"
 title = "La chaîne Twitch de Billy"
 description = "Du stream avec du code dedans !"
