@@ -9,7 +9,7 @@ The script also copies `index.html` to the root of the website
 ## How to use it
 If you want your own redirect service: 
 1. Fork this repo
-2. Update the file `redirects.yml` with your data
+2. Update the file `redirects.toml` with your data
 3. Build this site on a vercel project tied to a domain name that you own
    - build command: `npm run build` (try it locally, you'll see what it does)
    - output directory: `redirects`
@@ -54,7 +54,7 @@ default-lang = "fr"
 [redirects]
 
 [redirects.newsletter]
-lan = "en"
+lang = "en"
 aliases = [ "📰", "🗞️" ]
 url = "https://www.lucienbill.fr/newsletter/"
 title = "This is my newsletter!"
