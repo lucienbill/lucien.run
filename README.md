@@ -3,14 +3,14 @@ personnal redirect thingy (URL minifier)
 
 The redirects work with pure HTML.
 
-The redirects are configured in `redirects.yml`, and the script to build them is `node builder/build.js`.
+The redirects are configured in `redirects.toml`, and the script to build them is `node builder/build.js`.
 The script also copies `index.html` to the root of the website
 
 ## How to use it
 If you want your own redirect service: 
 1. Fork this repo
 2. Update the file `redirects.toml` with your data
-3. Build this site on a vercel project tied to a domain name that you own
+3. Build this site on a server tied to a domain name that you own - I use CloudFlare pages but it can work with anything, really 
    - build command: `npm run build` (try it locally, you'll see what it does)
    - output directory: `redirects`
    - install command: `npm install`
